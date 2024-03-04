@@ -36,3 +36,31 @@ Remember, this journey involves collaboration between your development, operatio
 (4) Azure Migration Strategy: Four Steps to the Cloud - NetApp. https://bluexp.netapp.com/blog/azure-migration-strategy-four-steps-to-the-cloud.
 (5) How to Migrate and Modernize with the Cloud | Microsoft Azure. https://azure.microsoft.com/en-ca/solutions/migration/migration-journey/.
 (6) undefined. http://aka.ms/pulabs.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant AzureAccount
+    participant NetworkConfig
+    participant StorageConfig
+    participant DatabaseMigration
+    participant AppDeployment
+    participant Integration
+    participant Security
+    participant Monitoring
+    participant Backup
+    participant Testing
+    participant GoLive
+
+    User->>AzureAccount: Create Azure account/setup billing
+    AzureAccount->>NetworkConfig: Set up VNets, subnets, NSGs
+    AzureAccount->>StorageConfig: Create Storage accounts, configure storage
+    AzureAccount->>DatabaseMigration: Migrate databases to Azure
+    AzureAccount->>AppDeployment: Choose deployment method (App Service, AKS, VMs)
+    AppDeployment->>Integration: Integrate with Azure services
+    AppDeployment->>Security: Implement security measures
+    AppDeployment->>Monitoring: Set up monitoring and logging
+    AppDeployment->>Backup: Configure backup and disaster recovery
+    AppDeployment->>Testing: Perform testing and optimization
+    Testing->>GoLive: Go live with the migrated application
+```
